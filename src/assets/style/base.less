@@ -1,0 +1,55 @@
+html {
+  font-size: 100px;
+}
+
+body {
+  font-size: .12rem;
+}
+
+/*滚动条*/
+::-webkit-scrollbar {
+  width: 6px;
+  /*对垂直流动条有效*/
+  height: 6px;
+  /*对水平流动条有效*/
+  background: #0a6463;
+  border: none;
+
+  &::corner-present {
+    display: none;
+  }
+}
+
+/*定义滚动条的轨道颜色、内阴影及圆角*/
+::-webkit-scrollbar-track {
+  // -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+  // box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+  background: #0a6463;
+  border-radius: 3px;
+}
+
+
+
+/*定义滑块颜色、内阴影及圆角*/
+::-webkit-scrollbar-thumb {
+  border-radius: 7px;
+  /*-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);*/
+  background: #00cfbb;
+}
+
+::-webkit-scrollbar-button,
+::-webkit-scrollbar-corner,
+::-webkit-scrollbar-track-piece,
+::-webkit-resizer,
+::-webkit-scrollbar-track-piece:start {
+  background-color: #0557db;
+  display: none;
+}
+
+.ant-input::-webkit-resizer {
+  background-color: transparent
+}
+
+.ant-form-explain {
+  position: absolute;
+}

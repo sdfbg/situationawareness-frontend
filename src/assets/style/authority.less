@@ -1,0 +1,1163 @@
+.user_manage {
+  height: 100%;
+
+  .left_content {
+    height: calc(100% - 10px);
+    background: rgba(0, 30, 57, .75);
+
+    .left_title {
+      color: #F1B134;
+      text-align: center;
+      letter-spacing: 4px;
+      // font-weight: bold;
+      font-size: 2.3vh;
+      margin-top: 1.9vh;
+    }
+
+    .ant-menu-item.item_active {
+      background: url(../images/nav_active.png) no-repeat;
+      background-size: 100% 100%;
+
+      .nav_title {
+        color: #fff;
+      }
+
+      .right_arrow {
+        display: none;
+      }
+    }
+
+    /deep/.ant-menu {
+      background-color: transparent;
+      color: #fff;
+
+      .left_icon,
+      .nav_title {
+        float: left;
+      }
+
+      .left_icon {
+        margin-top: 0.9vh;
+      }
+
+      .nav_title {
+        margin-left: 5px;
+        color: #5ca9d1;
+        letter-spacing: 2px;
+      }
+
+      .right_arrow {
+        float: right;
+        margin-top: 1.4vh;
+        height: 1.7vh;
+      }
+    }
+
+    /deep/.ant-menu-vertical>.ant-menu-item {
+      font-size: 1.7vh;
+      height: 4.8vh;
+      line-height: 4.8vh;
+
+      .left_icon {
+        width: 2.5vh;
+        height: 1.4vw;
+      }
+    }
+
+    /deep/.ant-menu-vertical {
+      border-right: none;
+    }
+
+
+  }
+
+  .right_content {
+    margin-left: 30px;
+
+    .search_area {
+      width: 100%;
+      height: 11.5vh;
+      background: url(../images/search_bg.png) no-repeat;
+      background-size: 100% 100%;
+      margin-top: 1.4vh;
+      padding: 1.9vh;
+
+      .search_item {
+        margin-left: 2.9vh;
+        margin-bottom: 2.9vh;
+
+        label {
+          // line-height: 7.7vh;
+          color: #00CCDC;
+          font-size: 1.7vh;
+          vertical-align: -webkit-baseline-middle;
+        }
+
+        /deep/.ant-input {
+          width: 14.6vw;
+          height: 4.2vh;
+          border-radius: 4px;
+          border: 2px solid #008095;
+          background-color: transparent;
+          vertical-align: -webkit-baseline-middle;
+          color: #fff;
+        }
+
+        /deep/.ant-form-inline .ant-form-item {
+          margin-right: 0;
+          bottom: -24px;
+        }
+        /deep/.ant-form-item {
+          -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+          margin: 0;
+          padding: 0;
+          color: rgba(0, 0, 0, 0.65);
+          font-size: 14px;
+          font-variant: tabular-nums;
+          line-height: 1.5;
+          list-style: none;
+          -webkit-font-feature-settings: 'tnum';
+          font-feature-settings: 'tnum';
+          bottom: -15px; 
+          /* vertical-align: top; */
+      }
+
+        button {
+          width: 2.8vw;
+          height: 4.2vh;
+          background-color: #25D0DE;
+          border: none;
+          font-size: 2.5vh;
+          vertical-align: middle;
+          border-radius: 2px;
+          margin-left: 10px;
+          cursor: pointer;
+          vertical-align: -webkit-baseline-middle;
+          line-height: 4.2vh;
+        }
+
+        .org_select {
+          width: 7.8vw;
+          height: 4.2vh;
+          vertical-align: -webkit-baseline-middle;
+          margin-right: 10px;
+        }
+
+        /deep/.ant-select-selection--single {
+          height: 4.2vh;
+          border: 2px solid #008095;
+        }
+
+        /deep/.ant-select-selection__rendered {
+          line-height: 4.2vh;
+        }
+
+        /deep/.ant-select-arrow {
+          background: url(../images//tri.png) no-repeat;
+          background-size: 100%;
+          color: transparent;
+        }
+      }
+    }
+
+    .table_area {
+      width: 100%;
+      height: calc(100% - 19.2vh);
+      background: url(../images/table_area.png) no-repeat;
+      background-size: 100% 100%;
+      margin-top: 1.3vh;
+      padding-top: 2.9vh;
+
+      /* 新增用户 */
+      /deep/.ant-form.user_form {
+        height: 50vh;
+        overflow-y: auto;
+        width: 90%;
+        margin: 0 auto;
+      }
+
+      .table_btns {
+        width: 96%;
+        margin: 0 auto;
+
+        button {
+          width: 5.1vw;
+          height: 3.8vh;
+          border: none;
+          font-size: 1.7vh;
+          cursor: pointer;
+          vertical-align: middle;
+
+          i {
+            margin-right: 4px;
+          }
+        }
+
+        .add_btn {
+          background: url(../images/add.png) no-repeat;
+          background-size: 100% 100%;
+          margin-left: 1.9vh;
+        }
+
+        .mulit_del {
+          background-color: #F39700;
+          color: #003B7B;
+          font-size: 1.6vh;
+          letter-spacing: 2px;
+          font-weight: bold;
+        }
+
+        .import_btn {
+          background: url(../images/import.png) no-repeat;
+          background-size: 100% 100%;
+          margin-left: 1.9vh;
+        }
+
+        .export_btn {
+          background: url(../images/export.png) no-repeat;
+          background-size: 100% 100%;
+          margin-left: 37vh;
+          margin-top: -6.6vh;
+        }
+      }
+
+      .table_content {
+        width: 96%;
+        margin: 0 auto;
+        margin-top: 15px;
+        max-height: 58vh;
+        overflow-y: auto;
+
+        /deep/.ant-table {
+          font-size: 15.3vh;
+        }
+
+        /deep/.ant-table table {
+          border-right: 1px solid #184B75;
+        }
+
+        /deep/.ant-table-thead>tr>th {
+          background-color: rgba(3, 85, 158, 0.4);
+          color: #fff;
+          text-align: center;
+          border-right: 1px solid #184B75;
+          border-bottom: 1px solid #184B75;
+          border-top: 1px solid #184B75;
+
+          &:last-child {
+            border-right: none;
+          }
+
+          &:first-child {
+            border-left: 1px solid #184B75;
+          }
+        }
+
+        /deep/.ant-table-tbody>tr>td {
+          border-bottom: 1px solid #184B75;
+          border-right: 1px solid #184B75;
+          color: #fff;
+          text-align: center;
+
+          &:first-child {
+            border-left: 1px solid #184B75;
+          }
+
+          &:last-child {
+            border-right: none;
+          }
+
+          .detail,
+          .modify {
+            margin-right: 10px;
+            color: #fff;
+          }
+
+          .delete {
+            color: #fff;
+          }
+        }
+
+        /deep/.ant-table-tbody>tr:hover:not(.ant-table-expanded-row):not(.ant-table-row-selected)>td {
+          background-color: #002A56;
+          color: #00CCDC;
+
+          .detail,
+          .modify,
+          .delete {
+            color: #00CCDC;
+          }
+
+
+        }
+
+        /deep/.ant-table-thead>tr>th,
+        /deep/.ant-table-tbody>tr>td {
+          padding: 1.1vh 0.8vw;
+        }
+
+        /deep/.ant-pagination-item {
+          border: 2px solid #00449F;
+          background-color: transparent;
+
+          a {
+            color: #fff;
+          }
+        }
+
+        /deep/.ant-pagination-item-active {
+          a {
+            color: #00CDE2;
+          }
+
+          background-color: #00275D;
+        }
+
+        /deep/.ant-pagination-prev .ant-pagination-item-link,
+        /deep/.ant-pagination-next .ant-pagination-item-link {
+          background-color: transparent;
+          border: 2px solid #00449F;
+
+          i {
+            color: #fff;
+          }
+        }
+
+        /deep/.ant-select-selection {
+          background-color: transparent;
+          color: #fff;
+          border: 2px solid #00449F;
+        }
+
+        /deep/.ant-switch {
+          background-color: #7E8585;
+          width: 3.6vw;
+          // height: 28px;
+        }
+
+        /deep/.ant-switch-checked {
+          background-color: #00CCDC;
+        }
+      }
+    }
+  }
+
+  /* 资源管理 */
+  .res_list {
+    background: rgba(0, 30, 57, .35);
+    padding-top: 30px;
+    text-align: center;
+
+    h2 {
+      width: 80%;
+      margin: 0 auto;
+      color: #fff;
+      font-weight: bold;
+      text-align: left;
+    }
+
+    .add_res {
+      width: 80%;
+      height: 30px;
+      text-align: center;
+      background-color: #00B2D3;
+      border: none;
+      color: #Fff;
+      border-radius: 0;
+      margin-top: 20px;
+      font-size: 16px;
+    }
+
+    .res_tree {
+      width: 80%;
+      margin: 0 auto;
+
+      /deep/.ant-tree {
+        font-size: 16px;
+        text-align: left;
+        color: #F39700;
+
+        li .ant-tree-node-content-wrapper {
+          color: #fff;
+          width: calc(100% - 50px);
+          overflow: hidden;
+        }
+
+        li .ant-tree-node-content-wrapper.ant-tree-node-selected {
+          background-color: #007087;
+        }
+
+        li .ant-tree-node-content-wrapper:hover {
+          background-color: #007087;
+        }
+
+      }
+
+      /deep/.ant-tree li span.ant-tree-switcher.ant-tree-switcher_close .ant-tree-switcher-icon,
+      /deep/.ant-tree li span.ant-tree-switcher.ant-tree-switcher_open .ant-tree-switcher-icon {
+        font-size: 24px;
+      }
+
+      .tree_btns {
+        text-align: left;
+        margin-top: 15px;
+        margin-bottom: 5px;
+        overflow: hidden;
+
+        /deep/.ant-checkbox-wrapper {
+          color: #fff;
+          float: left;
+          margin-top: 10px;
+        }
+
+        .multi_del {
+          background-color: #F39700;
+          border: none;
+          border-radius: 0;
+          float: right;
+          color: #fff;
+          font-size: 16px;
+        }
+      }
+
+      .tree_text {
+        float: left;
+      }
+
+      .tree_opts {
+        float: right;
+
+        img {
+          margin: 0 3px;
+
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .right_form {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 60px;
+    overflow: hidden;
+
+    .recover_btn {
+      float: right;
+      width: 210px;
+      height: 60px;
+      border: none;
+      border-radius: 0;
+      background-color: #005793;
+      color: #fff;
+      font-size: 20px;
+    }
+
+    /deep/.ant-form-item-label>label {
+      color: #fff;
+      font-size: 16px;
+    }
+
+    /deep/.ant-input {
+      height: 40px;
+      background-color: transparent;
+      border: 2px solid #00ECFA;
+    }
+
+    /deep/.ant-form-item-control {
+      text-align: center;
+    }
+
+    .confirm_btn {
+      width: 240px;
+      height: 60px;
+      background-color: #00B2D3;
+      font-size: 20px;
+      margin-top: 100px;
+    }
+  }
+
+  /* 应用管理表格 */
+  .app_table {
+    width: 98%;
+    margin: 0 auto;
+    margin-top: 30px;
+    background: none;
+
+    .table_btns {
+      margin-bottom: 20px;
+
+      button {
+        width: 7.4vw;
+        height: 3.8vh;
+        border: none;
+        font-size: 1.7vh;
+        cursor: pointer;
+        letter-spacing: 2px;
+      }
+
+      .del_btn {
+
+        color: #063D78;
+        background-color: #F39700;
+
+      }
+
+      .add_app {
+        background-color: #0E77C5;
+        color: #fff;
+        margin-right: 10px;
+      }
+    }
+
+    .table_content {
+      max-height: 71.3vh;
+      overflow-y: auto;
+
+
+
+    }
+
+  }
+
+  /*角色管理 树 */
+  .add_role /deep/.ant-modal-body {
+    height: 40.3vh;
+    overflow-y: auto;
+  }
+
+  /deep/.role_tree.ant-tree {
+    color: #fff;
+    max-height: 40vh;
+    overflow-y: auto;
+
+    li .ant-tree-node-content-wrapper,
+    li.ant-tree-treenode-disabled>.ant-tree-node-content-wrapper span {
+      color: #fff;
+      font-size: 1.6vh;
+      letter-spacing: 2px;
+    }
+
+    /deep/li span.ant-tree-switcher.ant-tree-switcher_close .ant-tree-switcher-icon,
+    /deep/ li span.ant-tree-switcher.ant-tree-switcher_close .ant-select-switcher-icon,
+    /deep/li span.ant-tree-switcher.ant-tree-switcher_open .ant-tree-switcher-icon,
+    /deep/li span.ant-tree-switcher.ant-tree-switcher_open .ant-select-switcher-icon {
+      font-size: 20px;
+      color: cyan;
+    }
+
+    /deep/.ant-tree-checkbox-inner {
+      border: 1px solid cyan;
+      background-color: transparent;
+    }
+
+    /deep/.ant-tree-checkbox-checked .ant-tree-checkbox-inner::after {
+      border-color: cyan;
+    }
+
+    /deep/.ant-tree-checkbox-indeterminate .ant-tree-checkbox-inner::after {
+      background-color: cyan;
+    }
+  }
+
+  /* 应用组管理 */
+  .group_tab {
+    margin-top: 15px;
+    color: #fff;
+
+
+  }
+
+  /deep/.ant-modal-content .app_search {
+    /deep/.ant-input {
+      border-right: none;
+    }
+
+    /deep/.ant-btn-primary {
+      height: 3.8vh;
+    }
+
+
+  }
+
+  /deep/.ant-input-group-addon {
+    background-color: transparent;
+  }
+
+  .add_group {
+    position: absolute;
+    left: 19px;
+    top: 30px;
+
+    button {
+      width: 12.4vw;
+      margin-left: 10%;
+      height: 8.7vh;
+      line-height: 8.7vh;
+      background: url(../images/add_group.png) no-repeat;
+      background-size: 100% 100%;
+      border: none;
+      color: #fff;
+      font-size: 1.7vh;
+    }
+  }
+
+  /deep/.ant-tabs .ant-tabs-left-bar .ant-tabs-nav-container.ant-tabs-nav-container-scrolling {
+    padding-top: 12.5vh;
+  }
+
+  /deep/.group_tab.ant-tabs {
+    overflow: visible;
+  }
+
+  /deep/.ant-tabs .ant-tabs-left-bar {
+    width: 20%;
+    border-right: none;
+
+    .ant-tabs-tab {
+      margin: 0
+    }
+  }
+
+  /deep/.ant-tabs-tab .tab_title {
+    width: 12.4vw;
+    margin-left: 9%;
+    background: url(../images/bar_normal.png) no-repeat;
+    background-size: 100% 100%;
+    height: 8.7vh;
+    text-align: center;
+    line-height: 8.7vh;
+    font-size: 1.7vh;
+    color: #00AAD2;
+    letter-spacing: 2px;
+    padding: 0;
+    margin-bottom: 0;
+  }
+
+  /deep/.ant-tabs-tab.ant-tabs-tab-active .tab_title {
+    background: url(../images/bar_active.png) no-repeat;
+    background-size: 100% 100%;
+    color: #fff;
+    width: 12.8vw;
+  }
+
+  /deep/.ant-tabs-tab.ant-tabs-tab-active {
+    .tabExtra {
+      display: block;
+
+    }
+  }
+
+  .tabExtra {
+    display: none;
+    position: absolute;
+    left: 0.8vw;
+    top: 2vh;
+
+    img {
+      display: block;
+      margin-bottom: 10px;
+      width: 1.1vw;
+    }
+  }
+
+  /deep/.ant-tabs .ant-tabs-left-bar .ant-tabs-tab-prev,
+  /deep/.ant-tabs .ant-tabs-right-bar .ant-tabs-tab-prev,
+  /deep/.ant-tabs .ant-tabs-left-bar .ant-tabs-tab-next,
+  /deep/.ant-tabs .ant-tabs-right-bar .ant-tabs-tab-next {
+    width: 12.4vw;
+    margin-left: 9%;
+  }
+
+  /deep/.ant-tabs-tab-prev {
+    left: 9%;
+  }
+
+  /deep/.ant-tabs-tab-prev-icon-target,
+  /deep/.ant-tabs-tab-next-icon-target {
+    font-size: 3.8vh;
+    color: #00CEFF;
+  }
+
+  /deep/.ant-tabs .ant-tabs-left-content {
+    border-left: none;
+    height: 100%;
+    background: url(../images/bar_content.png) no-repeat;
+    background-size: 100% 100%;
+
+    .ant-tabs-tabpane {
+      width: 98%;
+      // height: 100%;
+
+      padding-top: 40px;
+    }
+  }
+
+  /deep/.ant-tabs-extra-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    img {
+      display: block;
+      margin-bottom: 10px;
+    }
+  }
+
+  /deep/.ant-tabs-ink-bar {
+    background-color: transparent;
+  }
+
+  .tab_table {
+    width: 96%;
+    margin: 0 auto;
+
+    .tab_btns {
+      margin-bottom: 15px;
+
+      button {
+        width: 12.5vw;
+        height: 3.7vh;
+        color: #fff;
+        font-size: 1.7vh;
+        letter-spacing: 3px;
+        border: none;
+        border-radius: 0;
+      }
+
+      .multi_remove {
+        background-color: #F39700;
+      }
+
+      .add_app {
+        background-color: #0e77c5;
+        margin-left: 15px;
+      }
+    }
+
+    .group_table {
+      max-height: 63.5vh;
+      overflow-y: auto;
+
+    }
+
+    // /deep/.ant-table-thead>tr>th,
+    // /deep/.ant-table-tbody>tr>td {
+    //   padding: 12px 16px;
+    // }
+  }
+}
+
+
+
+
+/* 组织管理 */
+.org_list {
+  h2 {
+    color: #00B1DA;
+    margin-top: 20px;
+    letter-spacing: 4px;
+    font-size: 2vh;
+  }
+
+  .org_search {
+    /deep/.ant-input {
+      background-color: transparent;
+      color: #fff;
+      border: .2vh solid #007E96;
+      height: 3.8vh;
+    }
+
+    /deep/.ant-input-suffix {
+      color: #fff;
+      font-size: 2.5vh;
+      font-weight: bold;
+      border-left: 2px solid #007E96;
+      height: 100%;
+      padding-left: 0.5vw;
+
+      /deep/.ant-input-search-icon {
+        color: #00AFD8;
+      }
+    }
+  }
+
+  .multi_btns {
+    margin-top: 1.8vh;
+
+    button {
+      border-radius: 0;
+      color: #fff;
+      border: none;
+      width: 49%;
+      height: 3.6vh;
+      font-size: 1.8vh;
+      letter-spacing: 4px;
+    }
+
+    .multi_del {
+      background-color: #FFA900;
+    }
+
+    .add_org {
+      background-color: #00ABD4;
+      margin-right: 0%;
+      margin-left: 2%;
+    }
+  }
+
+  .org_tree {
+    margin-top: 1.8vh;
+    max-height: 70vh;
+    overflow-y: auto;
+
+    /deep/.ant-tree li .ant-tree-node-content-wrapper {
+      color: #fff;
+      font-size: 1.8vh;
+      letter-spacing: .1vh;
+      width: calc(100% - 60px);
+      padding-right: 0;
+    }
+
+    /deep/.ant-tree li span.ant-tree-switcher.ant-tree-switcher_close .ant-tree-switcher-icon,
+    /deep/.ant-tree li span.ant-tree-switcher.ant-tree-switcher_close .ant-select-switcher-icon,
+    /deep/.ant-tree li span.ant-tree-switcher.ant-tree-switcher_open .ant-tree-switcher-icon,
+    /deep/ .ant-tree li span.ant-tree-switcher.ant-tree-switcher_open .ant-select-switcher-icon {
+      font-size: 2.4vh;
+      color: #00F0FF;
+    }
+
+    /deep/.ant-tree-checkbox-inner {
+      background-color: transparent;
+      border: 1px solid #00D2FF;
+      width: 1.5vh;
+      height: 1.5vh;
+    }
+
+    /deep/.ant-tree li .ant-tree-node-content-wrapper:hover,
+    /deep/.ant-tree li .ant-tree-node-content-wrapper.ant-tree-node-selected {
+      background-color: #0097BF;
+
+      .tree_text {
+        background-color: #0097BF;
+      }
+
+      .tree_opts {
+        background-color: #002445;
+        display: block;
+      }
+    }
+
+    .tree_text {
+      float: left;
+      width: 60%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .tree_opts {
+      float: right;
+      // display: none;
+
+      img {
+        margin: 0 0.1vw;
+        height: 1.6vh;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+
+.portal_wrap .portal_content .ant-col.org_detail {
+  margin-top: 40px;
+  background: url(../images/bar_content.png) no-repeat;
+  background-size: 100% 100%;
+  height: 78.9vh;
+  padding: 30px;
+  padding-top: 60px;
+
+  h2 {
+    border-left: 8px solid #FFB800;
+    color: #fff;
+    padding-left: 10px;
+    font-size: 2vh;
+  }
+
+  .org_item {
+    font-size: 1.6vh;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    margin-top: 20px;
+  }
+
+  button {
+    width: 5.1vw;
+    height: 3.8vh;
+    border: none;
+    font-size: 1.7vh;
+    cursor: pointer;
+    vertical-align: middle;
+
+    i {
+      margin-right: 4px;
+    }
+  }
+
+  .add_btn {
+    background: url(../images/add.png) no-repeat;
+    background-size: 100% 100%;
+    margin-left: 1.9vh;
+  }
+
+  .import_btn {
+    background: url(../images/import.png) no-repeat;
+    background-size: 100% 100%;
+    margin-left: 1.9vh;
+  }
+
+  .export_btn {
+    background: url(../images/export.png) no-repeat;
+    background-size: 100% 100%;
+    margin-left: 1.9vh;
+    // margin-left: 38vh;
+    // margin-top: -6vh;
+  }
+
+  .org_search {
+    display: inline-block;
+    margin-left: 10px;
+
+    .select_type {
+      -webkit-appearance: none;
+      appearance: none;
+      background-color: transparent;
+      background: url(../images/tri.png) no-repeat;
+      background-position: 56px center;
+      background-size: 15% 30%;
+      color: #fff;
+      border: 0.2vh solid #00D4E6;
+      width: 80px;
+      height: 3.8vh;
+      border-radius: 4px;
+      margin-right: 10px;
+
+      option {
+        background: rgb(0, 62, 108);
+      }
+    }
+
+    .cname {
+      width: 200px;
+    }
+
+    .sea_btn {
+      background-color: #00ABD4;
+      margin-left: 10px;
+      width: 40px;
+      border-radius: 4px;
+      text-align: center;
+    }
+  }
+}
+
+/* table */
+/deep/.ant-table table {
+  border: 1px solid #015BA5;
+  font-size: 1.6vh
+}
+
+/deep/.ant-table-tbody>tr:nth-child(even) {
+  background-color: rgba(0, 31, 61, .5)
+}
+
+/deep/.ant-table-tbody>tr:nth-child(odd) {
+  background-color: rgba(0, 44, 89, .5);
+}
+
+/deep/.ant-table-thead>tr>th {
+  background-color: #0053A8;
+  color: #fff;
+  text-align: center;
+  border-right: 1px solid #2681cc;
+  border-bottom: none;
+}
+
+/deep/.ant-table-thead>tr>th,
+/deep/.ant-table-tbody>tr>td {
+  padding: 1.6vh;
+}
+
+/deep/.ant-table-tbody>tr>td {
+  color: #fff;
+  border-bottom: none;
+  border-right: 1px solid #015BA5;
+  text-align: center;
+
+  a {
+    margin: 0 10px;
+    color: #fff;
+
+  }
+}
+
+/deep/.ant-table-tbody>tr:hover:not(.ant-table-expanded-row):not(.ant-table-row-selected)>td,
+/deep/.ant-table-tbody>tr.ant-table-row-selected td {
+  background-color: #0b7fb5;
+}
+
+/deep/.ant-pagination-item {
+  border: .2vh solid #00449F;
+  background-color: transparent;
+
+  a {
+    color: #fff;
+  }
+}
+
+/deep/.ant-pagination-total-text {
+  color: #fff;
+}
+
+/deep/.ant-pagination-item-active {
+  a {
+    color: #00CDE2;
+  }
+
+  background-color: #00275D;
+}
+
+/deep/.ant-pagination-prev .ant-pagination-item-link,
+/deep/.ant-pagination-next .ant-pagination-item-link {
+  background-color: transparent;
+  border: .2vh solid #00449F;
+
+  i {
+    color: #fff;
+  }
+}
+
+/deep/.ant-select-selection {
+  background-color: transparent;
+  color: #fff;
+  border: .2vh solid #00449F;
+}
+
+/* 滚动条 */
+/*滚动条*/
+::-webkit-scrollbar {
+  width: 4px;
+  /*对垂直流动条有效*/
+  height: 4px;
+  /*对水平流动条有效*/
+}
+
+/*定义滚动条的轨道颜色、内阴影及圆角*/
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+  background-color: #0068b3;
+  border-radius: 3px;
+}
+
+
+/*定义滑块颜色、内阴影及圆角*/
+::-webkit-scrollbar-thumb {
+  border-radius: 7px;
+  /*-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);*/
+  background: #00ffff;
+}
+
+/*定义两端按钮的样式*/
+/*::-webkit-scrollbar-button {
+		    background-color:cyan;
+		}*/
+
+/*定义右下角汇合处的样式*/
+::-webkit-scrollbar-corner {
+  background: khaki;
+}
+
+/* 删除 */
+/deep/.ant-modal-confirm.delModal {
+  background: url(../images/del_modal_bg.png) no-repeat;
+  background-size: 100% 100%;
+  height: 240px;
+  color: #fff;
+  width: 420px;
+  .ant-modal-confirm-btns{
+    overflow: hidden;
+    width: 56%;
+    margin: 0 auto;
+    margin-top: 30px;
+    button{float: right;}
+  }
+}
+
+/deep/.delModal .ant-modal-content {
+  background: none;
+}
+
+.del_info {
+  position: absolute;
+  top: 7px;
+  width: calc(100% - 10px);
+  left: 5px;
+  color: #fff;
+  background-color: #0034c1;
+  height: 40px;
+  border-radius: 8px 8px 0px 0;
+  border-bottom: 1px solid #00ffff;
+  line-height: 40px;
+  font-size: 14px;
+  padding-left: 15px;
+}
+
+/deep/.ant-modal-confirm .ant-modal-confirm-btns {
+  float: none;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/deep/.delModal .ant-modal-confirm-title {
+  margin-top: 60px;
+  color: #fff;
+  font-size: 16px;
+  padding-top: 6px;
+}
+
+/deep/.delModal .ant-modal-confirm-body>.anticon {
+  font-size: 36px;
+}
+
+/deep/.delModal .ant-btn {
+  width: 100px;
+  height: 46px;
+  background: url(../images/btn_bg.png) no-repeat;
+  background-size: 100% 100%;
+  border: none;
+  color: #fff;
+}
+/deep/.ant-table-placeholder {
+  position: relative;
+  z-index: 1;
+  margin-top: -1px;
+  padding: 16px 16px;
+  color: rgba(0, 0, 0, 0.25);
+  font-size: 14px;
+  text-align: center;
+  background: #00275D; 
+  border-top: 1px solid #e8e8e8;
+  border-bottom: 1px solid #e8e8e8;
+  border-radius: 0 0 4px 4px;
+}
+/deep/.ant-empty-description {
+  margin: 0;
+  color: #e8e8e8;
+}

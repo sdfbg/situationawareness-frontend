@@ -1,0 +1,407 @@
+.left_slide {
+  width: 60%;
+  background: rgba(0, 25, 46, .85);
+  height: 100%;
+  padding-top: 30px;
+
+  .side_item {
+    text-align: center;
+    margin-bottom: 30px;
+    cursor: pointer;
+
+    img {
+      width: 3vw;
+    }
+  }
+
+  /*弹窗*/
+  /deep/.ant-modal-content {
+    background: url(../images/model.png) no-repeat transparent;
+    background-size: 100% 100%;
+    min-height: 420px;
+
+    .ant-modal-body {
+      padding-bottom: 0;
+    }
+  }
+
+  /deep/.ant-modal-header {
+    background-color: transparent;
+    border-bottom: none;
+    padding-bottom: 0;
+
+    .ant-modal-title {
+      width: 50%;
+      margin: 0 auto;
+      background: url(../images/title_01.png) no-repeat;
+      background-size: 100% 100%;
+      height: 6vh;
+      text-align: center;
+      line-height: 6vh;
+      color: #fff;
+      font-weight: bold;
+      letter-spacing: 2px;
+      margin-top: 1.5vh;
+      padding: 0 20px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+  }
+
+  /deep/.ant-modal-close {
+    color: #fff;
+    opacity: 1;
+    top: 10px;
+    right: 30px;
+  }
+
+  /deep/.ant-modal-footer {
+    border-top: none;
+    text-align: center;
+  }
+
+  .left_modal {
+    /deep/.ant-form-item-label>label {
+      color: #fff;
+    }
+
+    /deep/.ant-input {
+      background-color: transparent;
+      color: #fff;
+      border: 1px solid #00edf8;
+    }
+
+    /deep/.ant-upload-select-picture-card img {
+      width: 7.7vh;
+    }
+
+    /deep/.ant-form-item {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.right_content {
+  width: 100%;
+  padding-top: 70px;
+  height: 100%;
+
+  .desk_search {
+    width: 14.6vw;
+    position: absolute;
+    top: 20px;
+    right: -8vw;
+
+    /deep/.ant-input {
+      background-color: #00275C;
+      border: 1px solid #3BBAD7;
+      height: 4.5vh;
+      border-radius: 6px 0 0 6px;
+      color: #fff;
+    }
+
+    /deep/.ant-input-group-addon {
+      background-color: transparent;
+      border: 1px solid #3BBAD7;
+      border-radius: 0 6px 6px 0;
+      border-left: none;
+      height: 4.5vh;
+    }
+
+
+    /deep/.ant-btn-primary {
+      background-color: transparent;
+      color: #00ABC0;
+      font-size: 2.9vh;
+      border: none;
+      height: 4.23vh;
+      font-weight: bold;
+    }
+  }
+
+  .right_top {
+    .folder_item {
+      position: relative;
+      height: 265px;
+
+      .app_icons {
+        width: 80%;
+        height: 20.4vh;
+        /* background: url(../images/folder_bg.png) center center no-repeat;*/
+        overflow: hidden;
+        background-size: 100% 100%;
+        padding-top: 5.3vh;
+        padding-left: 10px;
+        padding-right: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+
+        img {
+          width: 4.3vh;
+          height: 6.3vh;
+          padding-top: 20px;
+          margin: 0 0.5vh;
+          cursor: pointer;
+          -webkit-filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, .3));
+          filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, .3));
+        }
+      }
+
+      p {
+        text-align: center;
+        font-size: 1.8vh;
+        // font-weight: bold;
+        width: 60%;
+        margin-top: 1vh;
+        color: #fff;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .del_icon {
+        position: absolute;
+        left: 60%;
+        z-index: 10;
+        color: red;
+        font-size: 1.73vh;
+        background: #0131deb8;
+        border: 1px solid #00dcff;
+        border-radius: 50%;
+        width: 2.5vh;
+        height: 2.5vh;
+        line-height: 2.5vh;
+        text-align: center;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .app_list {
+    // display: flex;
+    // flex-wrap: wrap;
+    // height: calc(100% - 240px);
+    height: calc(100% - 40px);
+
+    .app_item {
+      width: 16%;
+      float: left;
+
+      .app_thumb {
+        background: linear-gradient(#6174c5, #050c9c);
+        width: 11.7vh;
+        height: 11.7vh;
+        box-shadow: 2px 2px 5px rgba(27, 26, 26, .6);
+        border-radius: 1vh;
+        text-align: center;
+        line-height: 8.7vh;
+
+        img {
+          height: 10.8vh;
+          max-width: 100%;
+          padding-top: 20px;
+        }
+      }
+
+      p {
+        text-align: center;
+        font-size: 1.73vh;
+        margin-top: 10px;
+        font-weight: bold;
+        width: 8.7vh;
+        color: #fff;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+
+    /deep/ .slick-slide img {
+      display: inline;
+    }
+
+    /deep/.slick-slider {
+      height: 100%;
+    }
+
+    /deep/.slick-dots li.slick-active button {
+      background: #0FFFFF;
+      height: 1.6vh;
+      border-radius: 8px;
+      width: 3.8vh;
+    }
+
+    /deep/.slick-dots li button {
+      width: 1.6vh;
+      height: 1.6vh;
+      border-radius: 0.8vh;
+      border: 2px solid #0fffff;
+      background: #034480;
+      margin-left: 10px;
+      opacity: 1;
+    }
+  }
+
+  /*弹窗*/
+  /deep/.ant-modal-content {
+    background: url(../images/model.png) no-repeat transparent;
+    background-size: 100% 100%;
+    min-height: 420px;
+  }
+
+  /deep/.ant-modal-header {
+    background-color: transparent;
+    border-bottom: none;
+    padding-bottom: 0;
+
+    .ant-modal-title {
+      width: 50%;
+      margin: 0 auto;
+      background: url(../images/title_01.png) no-repeat;
+      background-size: 100% 100%;
+      height: 6vh;
+      text-align: center;
+      line-height: 6vh;
+      color: #fff;
+      font-weight: bold;
+      letter-spacing: 2px;
+      margin-top: 1.5vh;
+      padding: 0 20px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+  }
+
+  /deep/.ant-modal-close {
+    color: #fff;
+    opacity: 1;
+    top: 10px;
+    right: 30px;
+  }
+
+  .app_details {
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    height: 260px;
+
+    /deep/.ant-carousel {
+      width: 100%;
+
+      img {
+        display: inline;
+      }
+
+      .slick-slider {
+        height: 100%;
+      }
+
+      .slick-dots li.slick-active button {
+        background: #03FFFF;
+
+      }
+
+      .slick-dots li button {
+        width: 1.7vh;
+        height: 1.7vh;
+        border-radius: 50%;
+        border: 2px solid #00A4BC;
+        background-color: #034480;
+        margin: 0 5px;
+      }
+    }
+
+    .app_item_modal {
+      width: 25%;
+      float: left;
+      margin-bottom: 10px;
+    }
+
+    .app_thumb_modal {
+      background: linear-gradient(#6174c5, #050c9c);
+      width: 7.7vh;
+      height: 7.7vh;
+      -webkit-box-shadow: 2px 2px 5px rgba(27, 26, 26, 0.6);
+      box-shadow: 2px 2px 5px rgba(27, 26, 26, 0.6);
+      border-radius: 10px;
+      text-align: center;
+      line-height: 7.3vh;
+      border-radius: 0.4vh;
+      margin: 0 auto;
+
+      img {
+        height: 4vh;
+        max-width: 100%;
+      }
+
+    }
+
+    p {
+      width: 84px;
+      text-align: center;
+      color: #fff;
+      margin: 0 auto;
+      margin-top: 10px;
+    }
+  }
+}
+
+/* 删除 */
+/deep/.ant-modal-confirm.delModal {
+  background: url(../images/del_modal_bg.png) no-repeat;
+  background-size: 100% 100%;
+  height: 24vh;
+  color: #fff;
+  width: 21.9vw;
+}
+
+/deep/.delModal .ant-modal-content {
+  background: none;
+}
+
+.del_info {
+  position: absolute;
+  top: 7px;
+  width: calc(100% - 10px);
+  left: 5px;
+  color: #fff;
+  background-color: #0034c1;
+  height: 40px;
+  border-radius: 8px 8px 0px 0;
+  border-bottom: 1px solid #00ffff;
+  line-height: 40px;
+  font-size: 14px;
+  padding-left: 15px;
+}
+
+/deep/.ant-modal-confirm .ant-modal-confirm-btns {
+  float: none;
+  text-align: center;
+  margin-top: 1.8vh;
+}
+
+/deep/.delModal .ant-modal-confirm-title {
+  margin-top: 5.7vh;
+  color: #fff;
+  font-size: 1.6vh;
+  padding-top: 6px;
+}
+
+/deep/.delModal .ant-modal-confirm-body>.anticon {
+  font-size: 3.4vh;
+}
+
+/deep/.delModal .ant-btn {
+  width: 5.2vw;
+  height: 4.42vh;
+  background: url(../images/btn_bg.png) no-repeat;
+  background-size: 100% 100%;
+  border: none;
+  color: #fff;
+}

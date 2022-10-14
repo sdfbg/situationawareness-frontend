@@ -1,0 +1,75 @@
+@deep: ~">>>";
+
+.login_wrap {
+  width: 100%;
+  height: 100%;
+  background: url(../images/netlogin/bg.jpg) no-repeat;
+  background-size: 100% 100%;
+  padding-top: .2rem;
+
+  .title_area {
+    text-align: center;
+
+    img {
+      height: .77rem;
+    }
+  }
+
+  .login_area {
+    width: 100%;
+    height: 5.2rem;
+    background: url(../images/netlogin/login-bg.png) no-repeat;
+    background-size: 100% 100%;
+    margin-top: 20%;
+    padding: .6rem .3rem;
+
+    .login_title {
+      margin-bottom: .3rem;
+    }
+
+    @{deep}.ant-input {
+      background-color: #0F2A65;
+      border-color: #01B2F7;
+      height: .6rem;
+      color: #fff;
+      padding-left: .6rem;
+
+      &:-webkit-autofill,
+      &:-webkit-autofill:hover,
+      &:-webkit-autofill:focus {
+        border: 1px solid #01B2F7;
+        -webkit-text-fill-color: #fff;
+        -webkit-box-shadow: 0 0 0px 1000px #0F2A65 inset;
+        box-shadow: 0 0 0px 1000px #0F2A65 inset;
+        transition: background-color 5000s ease-in-out 0s;
+      }
+    }
+
+    @{deep}.ant-checkbox-wrapper {
+      color: #4FCDFB;
+      font-size: .16rem;
+    }
+
+    .login_other {
+      @{deep} .ant-form-item-control {
+        text-align: left;
+      }
+    }
+
+    @{deep}.has-error .ant-form-explain,
+    @{deep}.has-error .ant-form-split {
+      text-align: left;
+    }
+
+    .login_button {
+      width: 100%;
+      height: .6rem;
+      background: linear-gradient(#D0F6FF, #2EC7FF);
+      font-size: .22rem;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "name": "dhc-protal",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "net": "vue-cli-service build --mode net",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "@babel/core": "^7.18.2",
+    "@babel/preset-env": "^7.18.2",
+    "ant-design-vue": "^1.5.0",
+    "axios": "^0.19.2",
+    "bcryptjs": "^2.4.3",
+    "core-js": "^3.6.4",
+    "echarts": "^5.3.2",
+    "echarts-gl": "^2.0.9",
+    "file-saver": "^2.0.5",
+    "swiper": "^5.3.6",
+    "vue": "^2.6.11",
+    "vue-awesome-swiper": "^4.1.0",
+    "vue-echarts": "^6.1.0",
+    "vue-router": "^3.1.5",
+    "vue-seamless-scroll": "^1.1.23",
+    "vuex": "^3.1.2"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.2.0",
+    "@vue/cli-plugin-eslint": "~4.2.0",
+    "@vue/cli-plugin-router": "~4.2.0",
+    "@vue/cli-plugin-vuex": "~4.2.0",
+    "@vue/cli-service": "~4.2.0",
+    "@vue/composition-api": "^1.7.0",
+    "@vue/eslint-config-standard": "^5.1.0",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.7.2",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-vue": "^6.1.2",
+    "less": "^3.0.4",
+    "less-loader": "^5.0.0",
+    "vue-template-compiler": "^2.6.11"
+  }
+}

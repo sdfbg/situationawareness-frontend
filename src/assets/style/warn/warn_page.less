@@ -1,0 +1,183 @@
+@deep: ~">>>";
+
+.page_container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  .page_map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .list_container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 3.85rem;
+    background-color: rgba(2, 54, 107, .8);
+    z-index: 99;
+    border-radius: .1rem;
+    padding: .2rem;
+
+    h3 {
+      text-align: left;
+      margin: 0;
+      color: #fff;
+      line-height: .4rem;
+
+      span {
+        vertical-align: middle;
+        font-size: .16rem;
+        margin-left: .05rem;
+        font-weight: bold;
+      }
+    }
+
+    /* 车辆预警列表 */
+    .car_warn {
+      height: calc(100% - .8rem);
+      position: relative;
+      margin-top: .1rem;
+
+      .warn_list {
+        padding: 0 .15rem 0 .15rem;
+        overflow-y: auto;
+        height: 100%;
+        text-align: left;
+
+        .warn_date {
+          color: #00FFFF;
+        }
+
+        @{deep}.ant-timeline {
+          color: #fff;
+          padding-top: 0.1rem;
+        }
+
+        @{deep}.ant-timeline-item-head-blue {
+          background-color: #00FFFF;
+          box-shadow: 0px 0px 5px #00FFFF;
+          border: none;
+        }
+
+        @{deep}.ant-timeline-item-tail {
+          border-left: 1px solid #00FFFF;
+        }
+
+        .item_content {
+          width: 100%;
+          height: .96rem;
+          background: url("../../images/car_warn_bg.png") no-repeat;
+          background-size: 100% 100%;
+          padding: .1rem;
+
+          .content_top {
+            .warn_level {
+              span {
+                vertical-align: middle;
+
+                i {
+                  font-size: .2rem;
+                }
+
+                &.red {
+                  color: red;
+                }
+
+                &.orange {
+                  color: #F1853C;
+                }
+
+                &.yellow {
+                  color: #D5D534;
+                }
+              }
+            }
+
+            .warn_type {
+              padding: .02rem .1rem;
+              background-color: #FD9221;
+              border-radius: .06rem;
+            }
+          }
+
+          .content_bottom {
+            .unit {
+              width: 100%;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              color: #C495FD;
+              font-weight: bold
+            }
+
+            .deal_btn {
+              height: .24rem;
+              background-color: #0954AA;
+              border-color: #0772F6;
+              color: #fff;
+              padding: 0 .08rem;
+            }
+          }
+
+          p {
+            margin-top: .1rem;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            display: -moz-box;
+            -moz-line-clamp: 2;
+            -moz-box-orient: vertical;
+            word-wrap: break-word;
+            word-break: break-all;
+            white-space: normal;
+          }
+        }
+
+        /* 路 */
+        &.road_warn {
+          .item_content {
+            height: 1.3rem;
+          }
+        }
+      }
+    }
+
+  }
+
+  .bar_container {
+    position: absolute;
+    left: .1rem;
+    bottom: 0;
+    width: calc(100% - 4.1rem);
+    height: 2.6rem;
+    background-color: rgba(2, 54, 107, .8);
+    padding: .1rem .2rem;
+
+    h3 {
+      text-align: left;
+      margin: 0;
+      color: #fff;
+      line-height: .4rem;
+
+      span {
+        vertical-align: middle;
+        font-size: .16rem;
+        margin-left: .05rem;
+        font-weight: bold;
+      }
+    }
+  }
+}

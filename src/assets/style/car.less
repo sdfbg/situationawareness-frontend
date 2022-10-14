@@ -1,0 +1,1302 @@
+@deep: ~">>>";
+
+.page_contnet {
+  height: 100%;
+  overflow: hidden;
+  padding: 0.1rem 0;
+  display: flex;
+}
+
+.left_bg {
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: 25%;
+  bottom: 0;
+  background: linear-gradient(to right,
+      rgba(0, 0, 0, 1),
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.01));
+
+  &.min_bg {
+    bottom: calc(25% - 0.1rem);
+  }
+}
+
+.right_bg {
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  top: 0;
+  width: 25%;
+  bottom: 0;
+  background: linear-gradient(to left,
+      rgba(0, 0, 0, 1),
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.01));
+
+  &.min_bg {
+    bottom: calc(25% - 0.1rem);
+  }
+}
+
+.bottom_bg {
+  position: absolute;
+  z-index: 2;
+  left: 0%;
+  width: 100%;
+  height: calc(25% - 0.1rem);
+  bottom: 0;
+  background: linear-gradient(to top,
+      rgba(0, 0, 0, 1),
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.01));
+}
+
+.black_bg {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.page_left {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-between;
+  position: relative;
+  z-index: 10;
+
+  /* 下拉框 */
+  @{deep}.ant-select-dropdown {
+    background-color: #0e3b62;
+    border-color: #0ff;
+    color: #fff;
+
+    .ant-select-dropdown-menu-item {
+      color: #fff;
+      border-bottom: 1px dashed #058ddc9e;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      &.ant-select-dropdown-menu-item-selected {
+        background-color: #0492b6;
+      }
+
+      &:hover:not(.ant-select-dropdown-menu-item-disabled) {
+        background-color: #0492b6;
+      }
+    }
+
+    .ant-select-dropdown-menu-item-active:not(.ant-select-dropdown-menu-item-disabled) {
+      background-color: #0492b6;
+    }
+
+    .ant-divider {
+      background-color: #0492b6;
+    }
+  }
+
+  .left_search {
+    text-align: left;
+    padding-left: .1rem;
+
+    .ant-select {
+      vertical-align: bottom;
+      margin-left: .1rem;
+    }
+
+    @{deep}.ant-select-selection__rendered {
+      line-height: .3rem;
+    }
+
+    @{deep}.ant-select-selection {
+      height: 0.3rem;
+      background-color: #0e3b62;
+      border-color: #0ff;
+      color: #03e3fa;
+      vertical-align: middle;
+    }
+
+    @{deep}.ant-select-arrow {
+      color: #03e3fa;
+    }
+
+    @{deep}.ant-radio-button-wrapper {
+      background-color: #050d18;
+      border-color: #0ff;
+      color: #fff;
+      height: 0.3rem;
+      line-height: 0.3rem;
+      padding: 0 5px;
+
+      &.ant-radio-button-wrapper-checked {
+        background-color: #04b6e2cc;
+      }
+    }
+
+    .ant-radio-button-wrapper:not(:first-child)::before {
+      background-color: transparent;
+    }
+  }
+
+  .char_box {
+    height: calc(33.3333% - 0.1rem);
+    width: 100%;
+
+    // background: url(../images/chart_bg.png) no-repeat;
+    background-size: 100% 100%;
+    padding: 0.1rem;
+    position: relative;
+
+    .chart_tab {
+      position: absolute;
+      right: .2rem;
+      top: .16rem;
+
+      &.special {
+        top: .5rem;
+        z-index: 9999;
+      }
+
+      @{deep}&.ant-switch {
+        background-color: #0263ff;
+        line-height: .22rem;
+
+        &::after {
+          background-color: #02fffe;
+        }
+      }
+    }
+
+    h2 {
+      color: #01e6e7;
+      margin: 0;
+      font-size: 0.14rem;
+      background: url(../images/title-bg-s.png) no-repeat;
+      height: 0.32rem;
+      text-align: left;
+      line-height: 0.32rem;
+      padding-left: 0.3rem;
+
+      span {
+        margin: 0 0.05rem;
+      }
+
+      &.posr {
+        position: relative;
+      }
+
+      .question_icon {
+        position: absolute;
+        right: .8rem;
+        font-size: 0.2rem;
+        top: 0.15rem;
+        cursor: pointer;
+      }
+    }
+
+    &.big_box {
+      height: 66.6666%;
+    }
+
+    .chart_container {
+      display: flex;
+      height: 100%;
+    }
+
+    &.road_bottom {
+      display: flex;
+
+      .chart_container {
+        display: block;
+        width: 100%;
+        height: 100%;
+
+      }
+    }
+  }
+}
+
+@font-face {
+  font-family: myFont;
+  src: url("../fronts/YouSheBiaoTiHei-2.ttf");
+}
+
+.page_middle {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 0.15rem;
+
+  .map_area {
+    height: 66.6666%;
+    position: relative;
+
+    .data_display {
+      position: absolute;
+      top: 0;
+      width: 6.5rem;
+      height: .9rem;
+      left: 50%;
+      margin-left: -3.25rem;
+      z-index: 999;
+      background: url(../images/data_bg.png) no-repeat;
+      background-size: 100% 100%;
+      display: flex;
+      padding: .1rem;
+
+      h3 {
+        margin: 0;
+        color: #0ff;
+        font-size: .14rem;
+
+        span {
+          margin: 0 .05rem;
+        }
+      }
+
+      .data_item {
+        width: 50%;
+        padding: 0 .1rem;
+
+        .map_title {
+          position: absolute;
+          top: 0.1rem;
+          left: .1rem;
+  
+          h2 {
+            width: 1.3rem;
+          }
+        }
+
+        &:first-child {
+          background: url(../images/lineBG.png) right center no-repeat;
+        }
+      }
+
+      .numDiv {
+        // padding: 0.1rem 0.2rem;
+        overflow: hidden;
+        display: flex;
+        justify-content: space-between;
+
+        .numDivItemdiv {
+          background: url(~@/assets/images/number_bg.png) no-repeat;
+          background-size: 100% 100%;
+          text-align: center;
+          height: 0.42rem;
+          width: 0.33rem;
+          line-height: 0.42rem;
+          // margin-right: 0.12rem;
+          font-size: 0.33rem;
+          overflow: hidden;
+
+          .num_view {
+            position: relative;
+            display: inline-block;
+            margin-right: 18px;
+            width: 100%;
+            height: auto;
+
+            background: transparent;
+            transition: transform 1s ease-in-out;
+          }
+
+          .item {
+            background: transparent;
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    &.manage_map {
+      height: calc(66.666% - 1.3rem);
+
+      .map_title {
+        position: absolute;
+        top: 0.1rem;
+        left: 1rem;
+
+        h2 {
+          width: 1.3rem;
+        }
+      }
+
+      .map_point {
+        position: absolute;
+        z-index: 12;
+        cursor: pointer;
+
+        span {
+          width: 1.5rem;
+          height: 0.26rem;
+          display: inline-block;
+          background: url(../images/kk_bg.png) no-repeat;
+          background-size: 100% 100%;
+          text-align: center;
+          color: #fff;
+          font-weight: bold;
+          vertical-align: middle;
+          line-height: 0.26rem;
+        }
+      }
+
+      .point_popup {
+        width: 1.98rem;
+        height: 1.2rem;
+        background: url(../images/ponit_popup.png) no-repeat;
+        background-size: 100% 100%;
+        position: absolute;
+        z-index: 15;
+        top: 8%;
+        left: 22%;
+        padding: 0.1rem 0.2rem;
+        color: #fff;
+
+        h3 {
+          margin: 0;
+          color: #fff;
+        }
+
+        p {
+          margin-bottom: 0.05rem;
+        }
+
+        .btns {
+          button {
+            font-size: 0.14rem;
+            width: 45%;
+            padding: 0;
+            margin: 0 2%;
+            height: 0.24rem;
+            color: #fff;
+            border: none;
+            background-color: #00b7ee;
+
+            &.monitor {
+              background-color: #0263ff;
+            }
+          }
+        }
+      }
+
+      .test_map {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border: 2px solid #1074e3;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .weather_warning {
+        position: absolute;
+        top: 0.5rem;
+        left: 0.1rem;
+        z-index: 20;
+
+        .warning_item {
+          margin-bottom: 0.1rem;
+
+          p {
+            font-family: myFont;
+            color: #00ffff;
+            font-size: 0.2rem;
+            margin-bottom: 0;
+            text-align: left;
+          }
+
+          img {
+            width: 0.7rem;
+          }
+        }
+      }
+    }
+
+    .echarts_map {
+      height: calc(100% - .3rem);
+      margin-top: 1rem;
+
+      .map_index {
+        position: absolute;
+        top: 5%;
+        right: 40%;
+
+        span {
+          margin: 0 0.1rem;
+        }
+
+        i {
+          display: inline-block;
+          width: 0.1rem;
+          height: 0.1rem;
+          background-color: orange;
+          border-radius: 0.1rem;
+          margin-right: 0.05rem;
+
+          &.green {
+            background-color: greenyellow;
+          }
+        }
+      }
+    }
+
+    .echarts_map1 {
+      height: calc(100% + 1.1rem);
+      margin-top: .9rem;
+      width: calc(100% - 1em);
+      margin-left: 1em;
+      .map_index {
+        position: absolute;
+        top: 5%;
+        right: 40%;
+
+        span {
+          margin: 0 0.1rem;
+        }
+
+        i {
+          display: inline-block;
+          width: 0.1rem;
+          height: 0.1rem;
+          background-color: orange;
+          border-radius: 0.1rem;
+          margin-right: 0.05rem;
+
+          &.green {
+            background-color: greenyellow;
+          }
+        }
+      }
+    }
+
+    h2 {
+      width: 1.67rem;
+      height: 0.3rem;
+      color: #153a7e;
+      text-align: center;
+      line-height: 0.3rem;
+      background: url(../images/qb_bg.png) no-repeat;
+      background-size: 100% 100%;
+      font-size: 0.16rem;
+      font-weight: bold;
+    }
+
+    @{deep}.ant-select-selection {
+      height: 0.3rem;
+      background-color: #0e3b62;
+      border: none;
+      color: #03e3fa;
+      width: 1.6rem;
+    }
+
+    @{deep}.ant-select-arrow {
+      color: #03e3fa;
+    }
+
+    .ant-radio-group {
+      margin-left: 0.2rem;
+    }
+
+    .ant-radio-button-wrapper {
+      background-color: #050d18;
+      border-color: #0ff;
+      color: #fff;
+
+      &.ant-radio-button-wrapper-checked {
+        background-color: #04b6e2cc;
+      }
+    }
+
+    .ant-radio-button-wrapper:not(:first-child)::before {
+      background-color: transparent;
+    }
+
+    .map_data {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+
+      .data_item {
+        width: 1.4rem;
+        height: 1.2rem;
+        // background-color: ;?
+        border-radius: 8px;
+        border: 1px solid #2f6578;
+        margin-left: 0.3rem;
+        margin-bottom: 0.2rem;
+        padding: 0.1rem;
+
+        h3 {
+          color: #00ffff;
+          font-size: 0.16rem;
+          margin: 0;
+          font-weight: bold;
+        }
+
+        p {
+          margin-bottom: 0.1rem;
+
+          label {
+            font-size: 0.16rem;
+            display: inline-block;
+            width: 0.5rem;
+          }
+
+          span {
+            font-size: 0.22rem;
+            vertical-align: bottom;
+          }
+
+          span.green {
+            color: greenyellow;
+          }
+
+          span.orange {
+            color: orange;
+          }
+        }
+      }
+    }
+
+    /* raod */
+    &.road_map {
+      // position: relative;
+      // z-index: 0;
+
+      // .test_map {
+      //   position: absolute;
+      //   top: 0.4rem;
+      //   left: 0;
+      //   right: 0;
+      //   bottom: 0;
+
+      //   img {
+      //     width: 100%;
+      //     height: 100%;
+      //   }
+      // }
+
+      // .map_point {
+      //   position: absolute;
+      //   z-index: 0;
+      // }
+
+      // .map_options {
+      //   position: absolute;
+      //   top: 0.5rem;
+      //   right: 0.2rem;
+      //   // background-color: #04156ccf;
+      //   padding: 0.15rem;
+      //   border-radius: 0.1rem;
+
+      //   .ant-checkbox-wrapper {
+      //     display: block;
+      //     margin-bottom: 0.2rem;
+
+      //     &:last-child {
+      //       margin-bottom: 0;
+      //     }
+      //   }
+
+      //   .ant-checkbox-wrapper+.ant-checkbox-wrapper {
+      //     margin-left: 0;
+      //   }
+
+      //   @{deep}.ant-checkbox-inner {
+      //     background-color: #0c1e50;
+      //     border: 2px solid #0d63c4;
+      //     width: 0.18rem;
+      //     height: 0.18rem;
+      //   }
+
+      //   .ant-checkbox-wrapper {
+      //     color: #fff;
+      //   }
+      // }
+    }
+  }
+
+  .middle_bottom {
+    height: calc(33.3333% - 0.1rem);
+    width: 100%;
+    // background: url(../images/middle_bottom_bg.png) no-repeat;
+    background-size: 100% 100%;
+    padding: 0.1rem;
+    position: relative;
+    z-index: 10;
+
+    .box_tab {
+      position: absolute;
+      right: 0.2rem;
+      top: 0.4rem;
+
+      .ant-radio-button-wrapper {
+        background-color: #050d18;
+        border-color: #0ff;
+        color: #fff;
+        height: 0.24rem;
+        line-height: 0.24rem;
+        padding: 0 8px;
+
+        &.ant-radio-button-wrapper-checked {
+          background-color: #04b6e2cc;
+        }
+      }
+
+      .ant-radio-button-wrapper:not(:first-child)::before {
+        background-color: transparent;
+      }
+    }
+
+    h2 {
+      color: #01e6e7;
+      margin: 0;
+      font-size: 0.14rem;
+      background: url(../images/title-bg-l.png) no-repeat;
+      height: 0.32rem;
+      text-align: left;
+      line-height: 0.32rem;
+      padding-left: 0.3rem;
+
+      span {
+        margin: 0 0.05rem;
+      }
+
+      &.big_box {
+        height: 66.6666%;
+      }
+    }
+    .short-title {
+      background: url(../images/title-bg-mid.png) no-repeat;
+    }
+
+    .category {
+      height: 100%;
+      padding: 0.2rem;
+      display: flex;
+      color: #fff;
+      justify-content: space-between;
+      padding-top: 0.2rem;
+
+      .category_box {
+        width: calc(20% - 0.3rem);
+        height: 100%;
+        background: linear-gradient(to bottom,
+            rgba(8, 97, 117, 0),
+            rgba(8, 97, 117, 0.8));
+        border-radius: 0.1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-bottom: 0.2rem;
+
+        p {
+          font-size: 0.18rem;
+          font-weight: bold;
+        }
+
+        label {
+          font-size: 0.16rem;
+        }
+
+        .count {
+          display: block;
+          font-family: myFont;
+          font-size: 0.3rem;
+        }
+
+        .pie_box {
+          width: 1rem;
+          height: 1rem;
+          background-color: #146e7b;
+          border-radius: 50%;
+          margin: 0 auto;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+
+    .chart_container {
+      width: 50%;
+      height: calc(100% - 0.3rem);
+    }
+
+    &.road_bottom {
+      display: flex;
+
+      .chart_container {
+        display: block;
+        width: 50%;
+        height: calc(100% - 0.3em);
+
+        // h2 {
+        //   color: #01e6e7;
+        //   margin: 0;
+        //   font-size: 0.14rem;
+        //   background: url(../images/title-bg-s.png) no-repeat;
+        //   height: 0.32rem;
+        //   text-align: left;
+        //   line-height: 0.32rem;
+        //   padding-left: 0.3rem;
+
+        //   span {
+        //     margin: 0 0.05rem;
+        //   }
+
+        //   &.posr {
+        //     position: relative;
+        //   }
+
+        //   .question_icon {
+        //     position: absolute;
+        //     right: 0.2rem;
+        //     font-size: 0.2rem;
+        //     top: 0.05rem;
+        //     cursor: pointer;
+        //   }
+        // }
+      }
+    }
+  }
+}
+
+/* 车辆预警列表 */
+.car_warn {
+  height: calc(100% - 0.3rem);
+  position: relative;
+  padding-top: 0.4rem;
+
+  .select_box {
+    position: absolute;
+    right: 0.15rem;
+    top: 0;
+    width: 1.6rem;
+
+    @{deep}.ant-select-selection {
+      height: 0.3rem;
+      background-color: #0e3b62;
+      border: none;
+      color: #03e3fa;
+    }
+
+    @{deep}.ant-select-arrow {
+      color: #03e3fa;
+    }
+  }
+
+  .warn_list {
+    padding: 0 0.15rem 0 0.15rem;
+    overflow-y: auto;
+    height: 100%;
+    text-align: left;
+
+    @{deep}.ant-timeline {
+      color: #fff;
+    }
+
+    @{deep}.ant-timeline-item-head-blue {
+      background-color: #00ffff;
+      box-shadow: 0px 0px 5px #00ffff;
+      border: none;
+    }
+
+    @{deep}.ant-timeline-item-tail {
+      border-left: 1px solid #00ffff;
+    }
+
+    .item_content {
+      width: 100%;
+      height: 0.96rem;
+      background: url(../images/car_warn_bg.png) no-repeat;
+      background-size: 100% 100%;
+      padding: 0.1rem;
+
+      .content_top {
+        .car_num {
+          padding: 0.02rem 0.1rem;
+          background-color: #00ffff;
+          color: #02205a;
+          display: inline-block;
+          text-align: center;
+          font-weight: bold;
+        }
+
+        .warn_type {
+          padding: 0.02rem 0.1rem;
+          background-color: #e60012;
+          border-radius: 0.06rem;
+        }
+      }
+
+      p {
+        margin-top: 0.1rem;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        display: -moz-box;
+        -moz-line-clamp: 2;
+        -moz-box-orient: vertical;
+        word-wrap: break-word;
+        word-break: break-all;
+        white-space: normal;
+      }
+    }
+
+    /* 路 */
+    &.road_warn {
+      .item_content {
+        height: 1.3rem;
+      }
+    }
+  }
+}
+
+.chart_content {
+  height: calc(100% - 1rem);
+
+  .chart_item {
+    width: 96%;
+    margin: 0 auto;
+    height: 50%;
+    // border-bottom: 1px dashed #ccc;
+    display: flex;
+    // padding: 0.1rem, ;
+
+    .data_count {
+      width: 2.9rem;
+      text-align: center;
+      padding-top: 5%;
+
+      .data_top {
+        width: 0.48rem;
+        height: 0.48rem;
+        background: url(../images/rank_circle.png) no-repeat;
+        background-size: 100% 100%;
+        margin: 0 auto;
+        line-height: 0.4rem;
+      }
+
+      p {
+        margin: 0.02rem 0;
+      }
+
+      span {
+        color: #f3d505;
+        font-size: 0.35rem;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .link_flow {
+    height: 33.3333%;
+    display: flex;
+
+    .left_box {
+      width: 0.9rem;
+      text-align: center;
+      height: 0.7rem;
+      background-color: #0465b2;
+      border-radius: 0.1rem;
+      box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+
+      &.green {
+        background-color: #14b27a;
+      }
+
+      &.orange {
+        background-color: #969830;
+      }
+
+      h3 {
+        margin: 0;
+        color: #fff;
+      }
+
+      p {
+        margin: 0;
+        font-size: 0.22rem;
+        transform: scale(0.5);
+        width: 1.8rem;
+        margin-left: -0.4rem;
+        text-align: left;
+        margin-top: -0.1rem;
+      }
+    }
+  }
+}
+
+/* 路 */
+.chart_content_road {
+  height: calc(100% - 0.2rem);
+
+  .chart_item {
+    width: 96%;
+    margin: 0 auto;
+    height: 50%;
+    border-bottom: 1px dashed #ccc;
+    display: flex;
+    padding: 0.1rem;
+
+    .data_count {
+      width: 2.9rem;
+      text-align: center;
+      padding-top: 5%;
+
+      .data_top {
+        width: 0.48rem;
+        height: 0.48rem;
+        background: url(../images/rank_circle.png) no-repeat;
+        background-size: 100% 100%;
+        margin: 0 auto;
+        line-height: 0.4rem;
+      }
+
+      p {
+        margin: 0.02rem 0;
+      }
+
+      span {
+        color: #f3d505;
+        font-size: 0.35rem;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .link_flow {
+    height: 33.3333%;
+    display: flex;
+
+    .left_box {
+      width: 0.9rem;
+      text-align: center;
+      height: 0.7rem;
+      background-color: #0465b2;
+      border-radius: 0.1rem;
+      box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+
+      &.green {
+        background-color: #14b27a;
+      }
+
+      &.orange {
+        background-color: #969830;
+      }
+
+      h3 {
+        margin: 0;
+        color: #fff;
+      }
+
+      p {
+        margin: 0;
+        font-size: 0.22rem;
+        transform: scale(0.5);
+        width: 1.8rem;
+        margin-left: -0.4rem;
+        text-align: left;
+        margin-top: -0.1rem;
+      }
+    }
+  }
+}
+
+.road_box {
+  position: relative;
+
+  .box_tab {
+    position: absolute;
+    left: 0.1rem;
+    top: 0.5rem;
+
+    .ant-radio-button-wrapper {
+      background-color: #050d18;
+      border-color: #0ff;
+      color: #fff;
+      height: 0.24rem;
+      line-height: 0.24rem;
+      padding: 0 5px;
+
+      &.ant-radio-button-wrapper-checked {
+        background-color: #04b6e2cc;
+      }
+    }
+
+    .ant-radio-button-wrapper:not(:first-child)::before {
+      background-color: transparent;
+    }
+  }
+}
+
+/* 管理 */
+.manage_chart {
+  height: calc(100% - 0.2rem);
+  display: flex;
+
+  .text_info {
+    overflow-y: auto;
+    flex: 1;
+    height: 80%;
+    background-color: #1b3266;
+    padding: 0.1rem;
+    margin-top: 0.3rem;
+    margin-left: 0.15rem;
+    border-radius: 0.04rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .info_item {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    label {
+      width: 0.16rem;
+      height: 0.16rem;
+      display: inline-block;
+      background-color: #2d99ff;
+      text-align: center;
+      line-height: 0.16rem;
+      border-radius: 50%;
+      vertical-align: bottom;
+      margin-top: 0.02rem;
+    }
+
+    span {
+      display: inline-block;
+      font-size: 0.12rem;
+      vertical-align: bottom;
+
+      &.city {
+        width: 0.5rem;
+      }
+    }
+  }
+}
+
+.manage_box {
+  position: relative;
+
+  .box_tab {
+    position: absolute;
+    right: 0.1rem;
+    top: 0.5rem;
+    z-index: 999;
+
+    .ant-radio-button-wrapper {
+      background-color: #050d18;
+      border-color: #0ff;
+      color: #fff;
+      height: 0.24rem;
+      line-height: 0.24rem;
+      padding: 0 5px;
+
+      &.ant-radio-button-wrapper-checked {
+        background-color: #04b6e2cc;
+      }
+    }
+
+    .ant-radio-button-wrapper:not(:first-child)::before {
+      background-color: transparent;
+    }
+  }
+
+  .manage_title {
+    padding: 0.15rem;
+    padding-top: 0.3rem;
+    padding-bottom: 0;
+    display: flex;
+    line-height: 0.36rem;
+
+    .title_icon {
+      width: 0.4rem;
+      height: 0.4rem;
+      background: url(../images/rank_circle.png) no-repeat;
+      background-size: 100% 100%;
+      text-align: center;
+      line-height: 0.36rem;
+    }
+
+    label {
+      vertical-align: middle;
+      margin: 0 0.2rem;
+    }
+
+    span {
+      color: #f2ef06;
+      font-weight: bold;
+      vertical-align: middle;
+      font-size: 0.18rem;
+    }
+  }
+}
+
+.warn_info {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+
+  img {
+    height: 0.6rem;
+  }
+
+  .warn_item {
+    text-align: center;
+    width: 30%;
+
+    p {
+      margin-bottom: 0;
+    }
+
+    span {
+      color: #ffcd00;
+      font-size: 0.18rem;
+      font-weight: bold;
+    }
+  }
+}
+
+.page_middle {
+  .top_bottom {
+    height: 1.2rem;
+    position: relative;
+    // background: url(~@/assets/images/tongji_bg.png) no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    z-index: 10;
+
+    .lineBGImg {
+      height: 100%;
+      margin: 0 0.15rem;
+    }
+
+    .divDiv {
+      // float: left;
+      width: 33.3333%;
+      height: 100%;
+
+      .numDiv {
+        padding: 0.1rem 0.2rem;
+        overflow: hidden;
+        display: flex;
+        justify-content: space-between;
+
+        div {
+          float: left;
+          background: url(~@/assets/images/number_bg.png) no-repeat;
+          background-size: 100% 100%;
+          text-align: center;
+          height: 0.6rem;
+          width: 0.4rem;
+          line-height: 0.6rem;
+          font-size: 0.33rem;
+        }
+      }
+
+      .msgDiv {
+        font-size: 0.16rem;
+        padding-left: 0.2rem;
+
+        .spanSpan {
+          color: #00ff42;
+          font-size: 0.22rem;
+        }
+
+        .spanSpan2 {
+          color: #ff0000;
+        }
+      }
+    }
+  }
+
+  .center_bottom {
+    height: calc(66.6666% - 1.8rem);
+  }
+}
+
+/* 20220611新版 */
+.map_container {
+  position: absolute;
+  left: 0;
+  top: 20;
+  right: 0;
+  bottom: 0;
+
+  img {
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+  }
+}
+
+@{deep}.explain_modal {
+  .ant-popover-content {
+    .ant-popover-inner {
+      background: url(../../assets/images/warn/modal/modal_bg.png) no-repeat;
+      background-size: 100% 100%;
+      width: 6rem;
+
+      max-height: none;
+      min-height: fit-content;
+    }
+
+    .ant-popover-arrow {
+      border-bottom-color: #2196f3;
+      border-left-color: #2196f3;
+    }
+
+    .modal_container {
+      color: #fff;
+      line-height: 0.28rem;
+      font-size: 0.16rem;
+      height: 2.8rem;
+      overflow-y: auto;
+    }
+  }
+}
+
+/*滚动条*/
+@{deep}::-webkit-scrollbar {
+  width: 6px;
+  /*对垂直流动条有效*/
+  height: 6px;
+  /*对水平流动条有效*/
+}
+
+/*定义滚动条的轨道颜色、内阴影及圆角*/
+@{deep}::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #3d5d81;
+  border-radius: 3px;
+}
+
+/*定义滑块颜色、内阴影及圆角*/
+@{deep}::-webkit-scrollbar-thumb {
+  border-radius: 7px;
+  /*-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);*/
+  background: #02fffe;
+}
